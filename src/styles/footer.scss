@@ -1,0 +1,35 @@
+.footer {
+  background-color: #3f4750;
+  padding: 24px 16px 27px 16px;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-copyriter {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+
+    color: #9fa7b0;
+  }
+  &-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    svg {
+        cursor: pointer;
+        fill: #9FA7B0;
+      }
+      svg:hover {
+        fill: #47cf34;
+        transition: 0.2s;
+      }
+  }
+}

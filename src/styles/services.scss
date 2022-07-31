@@ -1,0 +1,94 @@
+.services {
+  padding: 62px 16px 99px 16px;
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-title {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin-bottom: 82px;
+    padding-left: 58px;
+    letter-spacing: 2px;
+
+    color: #282c37;
+  }
+
+  &-rhomb img{
+    position: absolute;
+    bottom: 88%;
+    left: 1%;
+    z-index: -1;
+  }
+  &-arrow img{
+    position: absolute;
+    bottom: 93%;
+    left: 9%;
+
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 27px;
+
+    background: #6ca7ef;
+    border-radius: 20px;
+    p {
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      //   font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      //   letter-spacing: 0.01em;
+
+      color: #ffffff;
+    }
+  }
+  &-blocks {
+    display: grid;
+    grid-template-rows: minmax(50px, 164px) 314px;
+    grid-template-columns: minmax(250px,382px) minmax(250px,381px);
+    grid-gap: 15px;
+    grid-template-areas:
+      "a h h"
+      "a m f"
+      "a m f";
+  }
+  &-h {
+    grid-area: h;
+    flex-direction: row;
+    gap: unset;
+
+    p {
+      max-width: 495px;
+    }
+  }
+  &-a {
+    grid-area: a;
+    p {
+      max-width: 270px;
+    }
+  }
+  &-m {
+    grid-area: m;
+    padding-left: 11px;
+    p {
+      max-width: 213px;
+    }
+  }
+  &-f {
+    grid-area: f;
+    p {
+      max-width: 242px;
+    }
+  }
+}

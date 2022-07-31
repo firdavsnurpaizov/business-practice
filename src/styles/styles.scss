@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import "./header.scss";
+@import "./intro.scss";
+@import "./questions.scss";
+@import "./services.scss";
+@import "./footer.scss";
+@import "./burger-menu.scss";
+
+// @font-face {
+//   font-family: "Lato", sans-serif;
+//   src: url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+//   // font-weight: 400;
+// }
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #282c37;
+}
+
+.container {
+  max-width: 1173px;
+  margin: 0 auto;
+}

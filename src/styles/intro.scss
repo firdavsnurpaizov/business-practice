@@ -1,0 +1,118 @@
+.intro {
+  padding: 108px 16px 0 16px;
+  position: relative;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 452px;
+  }
+  &-description {
+    padding-left: 30px;
+  }
+  &-title {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    // font-size: 44px;
+    font-size: clamp(28px, 4vw, 44px);
+    // line-height: 54px;
+    line-height: clamp(34px, 4vw, 54px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #282c37;
+    // margin-bottom: 4px;
+  }
+  &-subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    // font-size: 30px;
+    font-size: clamp(18px, 2vw, 30px);
+    // line-height: 37px;
+    line-height: clamp(22px, 2vw, 37px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #282c37;
+    margin-bottom: 19px;
+  }
+  &-text {
+    font-size: clamp(14px, 2vw, 22px);
+    line-height: clamp(17px, 2vw, 26px);
+    // max-width: 475px;
+    margin-bottom: 32px;
+  }
+
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 264px;
+    height: 48px;
+    background: #47cf34;
+    border-radius: 8px;
+    border: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+  &-cube {
+    flex: 1;
+    max-width: 467px;
+    margin-bottom: 13px;
+  }
+  &-cube img {
+    width: 100%;
+  }
+  &-line1 img {
+    position: absolute;
+    // max-width: 654px;
+    width: 45vw;
+    bottom: 67%;
+    left: 25%;
+  }
+  &-rhomb {
+    position: absolute;
+    bottom: 50%;
+    z-index: -1;
+  }
+  &-rhomb img {
+    width: 100%;
+  }
+  &-line2 img {
+    position: absolute;
+    bottom: -23%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .intro {
+    padding: 45px 32px 0 32px;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 336px;
+    }
+    &-text {
+      width: 300px;
+    }
+    &-cube {
+      width: 259px;
+      margin-bottom: 13px;
+    }
+    &-line1 img {
+      width: 45vw;
+    }
+  }
+}
