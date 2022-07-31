@@ -5,7 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
+const isDev = process.env.NODE_ENV === "development";
+const isProd = !isDev
+
 module.exports = {
+  // context: path.resolve(__dirname, 'src'),
   mode: "development",
   entry: ["@babel/polyfill", "./src/index.js"],
   output: {
@@ -22,7 +26,18 @@ module.exports = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({ template: "./src/index.html" }),
+    new HTMLWebpackPlugin({
+      template: "./src/index.html", filename: 'index.html',
+      minify: {
+        collapseWhitespace: isProd,
+      }
+    }),
+    new HTMLWebpackPlugin({
+      template: "./src/services-page.html", filename: "services-page.html"
+    }),
+    new HTMLWebpackPlugin({
+      template: "./src/trainings.html", filename: "trainings.html"
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
@@ -41,7 +56,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(s[ac]ss)$/,
+        test: /\.(sass|scss)$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
