@@ -1,0 +1,154 @@
+.trainings {
+  &-bg {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    z-index: -1;
+  }
+
+  &-breadcrumb {
+    font-size: 14px;
+    line-height: 16px;
+    color: #282c37;
+    padding-top: 66px;
+    span {
+      font-size: 14px;
+      line-height: 16px;
+      color: #9fa7b0;
+      padding-right: 16px;
+    }
+  }
+  &-items {
+    padding: 51px 0px 98px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+  }
+
+  &-item {
+    padding: 39px 76px 42px 38px;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 4px 4px 20px rgba(40, 44, 55, 0.2);
+    border-radius: 20px;
+
+    display: flex;
+    gap: 53px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+  &-right {
+    width: 50%;
+  }
+  &-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    div {
+      display: flex;
+      gap: 41px;
+    }
+
+    &__text {
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 20px;
+      color: #282c37;
+      max-width: 378px;
+    }
+  }
+  &-title {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(24px, 2vw, 30px);
+    line-height: clamp(26px, 2vh, 37px);
+    color: #282c37;
+    margin-bottom: 31px;
+  }
+  &-subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    color: #282c37;
+    margin-bottom: 5px;
+  }
+  &-text {
+    font-size: 18px;
+    line-height: 22px;
+    color: #282c37;
+
+    margin-bottom: 29px;
+  }
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+
+    width: 229px;
+    height: 48px;
+    background: #287ee7;
+    border: none;
+    border-radius: 8px;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background: #4b9afb;
+    }
+
+    span {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      list-style: none;
+      text-decoration: none;
+
+      color: #ffffff;
+    }
+  }
+}
+
+.second {
+  max-width: 375px;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .trainings {
+    padding: 0px 16px 0px 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .trainings {
+    &-item {
+      flex-direction: column;
+      padding: 16px;
+    }
+    &-right {
+      width: 100%;
+    }
+    &-left {
+      width: 100%;
+    }
+    &-breadcrumb {
+      padding-top: 30px;
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
+}

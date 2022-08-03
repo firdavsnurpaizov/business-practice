@@ -22,7 +22,9 @@
 
   &-menu {
     display: flex;
-
+    .active {
+      font-weight: bold;
+    }
     &__item {
       font-weight: 500;
       font-size: 14px;
@@ -31,11 +33,13 @@
       letter-spacing: 0.03em;
       text-transform: uppercase;
       color: #282c37;
-
       list-style: none;
-    }
-    &__item:hover {
-      font-weight: 700;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: #282c37;
+      }
     }
 
     &__item + &__item {
@@ -66,6 +70,18 @@
     }
     &-nav__wrapper {
       display: none;
+    }
+  }
+}
+.active {
+  font-weight: bold;
+}
+
+.burger {
+  &-menu__item {
+    a {
+      text-decoration: none;
+      color: #282c37;
     }
   }
 }

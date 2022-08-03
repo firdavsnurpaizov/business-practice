@@ -24,12 +24,21 @@
     gap: 24px;
 
     svg {
-        cursor: pointer;
-        fill: #9FA7B0;
-      }
-      svg:hover {
-        fill: #47cf34;
-        transition: 0.2s;
-      }
+      cursor: pointer;
+      fill: #9fa7b0;
+    }
+    svg:hover {
+      fill: #47cf34;
+      transition: 0.2s;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &-wrapper {
+      flex-direction: column-reverse;
+      gap: 22px;
+    }
   }
 }

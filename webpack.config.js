@@ -38,6 +38,9 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: "./src/trainings.html", filename: "trainings.html"
     }),
+    new HTMLWebpackPlugin({
+      template: "./src/training.html", filename: "training.html"
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [

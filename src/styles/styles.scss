@@ -6,12 +6,17 @@
 @import "./footer.scss";
 @import "./burger-menu.scss";
 @import "./services-page.scss";
+@import "./trainings.scss";
+@import "./training.scss";
 
-
+// @font-face {
+//   font-family: "Lato";
+//   src: url("../assets/fonts/Lato-Regular.ttf");
+// }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
 }
 
 *,
@@ -34,4 +39,25 @@ body {
 .container {
   max-width: 1173px;
   margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  line-height: 16px;
+  color: #282c37;
+  padding-top: 66px;
+  margin-bottom: 42px;
+
+  span {
+    font-size: 12px;
+    line-height: 16px;
+    color: #9fa7b0;
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    padding-top: 30px;
+  }
 }

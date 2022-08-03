@@ -12,24 +12,31 @@
     font-size: 30px;
     line-height: 37px;
     text-transform: uppercase;
-    margin-bottom: 82px;
+    margin-bottom: 47px;
     padding-left: 58px;
     letter-spacing: 2px;
 
     color: #282c37;
   }
 
-  &-rhomb img{
+  &-rhomb img {
     position: absolute;
     bottom: 88%;
     left: 1%;
     z-index: -1;
   }
-  &-arrow img{
+  &-arrow {
     position: absolute;
-    bottom: 93%;
+    bottom: 92%;
     left: 9%;
+    width: 52vw;
+  }
+  %-arrow img {
+    width: 100%;
+  }
 
+  &-arrowsmall {
+    display: none;
   }
 
   &-item {
@@ -38,25 +45,28 @@
     justify-content: center;
     flex-direction: column;
     gap: 27px;
+    text-decoration: none;
 
     background: #6ca7ef;
     border-radius: 20px;
     p {
       font-family: "Lato", sans-serif;
       font-style: normal;
-      //   font-weight: 600;
       font-size: 18px;
       line-height: 22px;
       text-align: center;
-      //   letter-spacing: 0.01em;
-
       color: #ffffff;
+    }
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      background: #5391dc;
     }
   }
   &-blocks {
     display: grid;
     grid-template-rows: minmax(50px, 164px) 314px;
-    grid-template-columns: minmax(250px,382px) minmax(250px,381px);
+    grid-template-columns: minmax(250px, 382px) minmax(250px, 381px);
     grid-gap: 15px;
     grid-template-areas:
       "a h h"
@@ -89,6 +99,59 @@
     grid-area: f;
     p {
       max-width: 242px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .services {
+    &-arrow {
+      display: none;
+    }
+    &-h {
+      gap: 27px;
+    }
+    &-arrowsmall {
+      display: block;
+      position: absolute;
+      top: -12%;
+      left: 11%;
+      z-index: -1;
+    }
+
+    &-blocks {
+      grid-template-rows: repeat(2, 250px);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "a h"
+        "m f";
+    }
+    &-h {
+      flex-direction: column;
+    }
+    &-h p {
+      width: 280px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .services {
+    &-arrowsmall {
+      display: none;
+    }
+    &-rhomb img {
+      display: none;
+    }
+
+    &-blocks {
+      grid-template-rows: repeat(4, 250px);
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "a"
+        "h"
+        "m"
+        "f";
     }
   }
 }
